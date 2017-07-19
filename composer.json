@@ -17,9 +17,6 @@
   "support": {
     "email": "slexx1234@gmail.com"
   },
-  "repositories": [
-
-  ],
   "require": {},
   "require-dev": {
     "phpunit/phpunit": "^6.2"

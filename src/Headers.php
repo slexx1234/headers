@@ -20,6 +20,7 @@ class Headers implements \Countable, \IteratorAggregate
     protected $readonly = false;
 
     /**
+     * Парсинг заголовков
      * @param string|array $headers
      * @return array
      * @throws TypeException
@@ -45,9 +46,18 @@ class Headers implements \Countable, \IteratorAggregate
     }
 
     /**
-     * @param string|array $headers
-     * @param bool [$readonly]
+     * @param string|array $headers - Строка заголовков или массив
+     * @param bool [$readonly] - Заголовки доступны только для чтения? По умолчанию false.
      * @throws TypeException
+     * @example:
+     *     <?php
+     *     use Slexx\Headers\Headers;
+     *
+     *     $headers = new Headers(getallheaders());
+     *     $headers->set('Accept-Charset', 'UTF-8');
+     *     $headers->remove('X-My-Custom-Header');
+     *
+     *     print_r((string) $headers);
      */
     public function __construct($headers, $readonly = false)
     {
@@ -56,8 +66,9 @@ class Headers implements \Countable, \IteratorAggregate
     }
 
     /**
-     * @param string $name
-     * @param string $value
+     * Устанавливает заголовак
+     * @param string $name - Имя заголовка
+     * @param string $value - Новый заголовок
      * @throws ReadonlyException
      * @return void
      */
@@ -71,7 +82,8 @@ class Headers implements \Countable, \IteratorAggregate
     }
 
     /**
-     * @param string $name
+     * Удаляет заголовак
+     * @param string $name - Имя заголовка
      * @throws ReadonlyException
      * @return void
      */
@@ -85,7 +97,8 @@ class Headers implements \Countable, \IteratorAggregate
     }
 
     /**
-     * @param string $name
+     * Проверяет существует ли заголовок
+     * @param string $name - Имя заголовка
      * @return bool
      */
     public function has($name)
@@ -94,7 +107,8 @@ class Headers implements \Countable, \IteratorAggregate
     }
 
     /**
-     * @param string $name
+     * Получает заголовак
+     * @param string $name - Имя заголовка
      * @return mixed
      */
     public function get($name) {
