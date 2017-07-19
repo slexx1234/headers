@@ -1,0 +1,38 @@
+{
+  "name": "slexx/headers",
+  "type": "library",
+  "description": "Http headers parser",
+  "keywords": [
+    "headers"
+  ],
+  "license": "MIT",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Aleksei Shchepkin",
+      "email": "slexx1234@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "slexx1234@gmail.com"
+  },
+  "repositories": [
+
+  ],
+  "require": {},
+  "require-dev": {
+    "phpunit/phpunit": "^6.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Slexx\\": "src/"
+    },
+    "exclude-from-classmap": [
+      "/tests/"
+    ]
+  },
+  "scripts": {
+    "test": "phpunit"
+  }
+}
