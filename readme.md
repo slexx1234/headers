@@ -10,7 +10,7 @@ $ composer require slexx/headers
 
 ## Базовое использование
 
-Класс разбивает `HTTP` заголовки на массив и предоставляет удобную обёртку с ними.
+Класс разбивает `HTTP` заголовки на массив и предоставляет удобную обёртку для ними.
 
 ```php
 $headers = new Slexx\Headers\Headers("Content-Type: image/jpeg\r\nAccept-Charset: utf-8\r\nX-My-Custom-Header: Zeke are cool");
